@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+input[type="text"] {
+}
+
+textarea {
+  height: 70px;
+}
+
+input,
+textarea {
+  width: 566px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1.1em;
+  background: white;
+}
+
+input[type="submit"] {
+  width: 200px;
+}
+
+#send-button,
+#global-footer{
+  text-align: right;
+}
+
+#main {
+  margin-top: 30px;
+}
+
+#logo {
+  letter-spacing: -11px;
+  font-size: 5em;
+  font-family: 'Josefin Sans', serif;
+  font-weight: normal;
+  color: #888;
+}
+
+#global-header {
+  margin-bottom: 20px;
+}
+
+#global-footer {
+  color: #aaa;
+}
+
+#global-header, #global-footer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+article.other, article.you {
+  position: relative;
+}
+
+.bubble {
+  margin: 20px;
+  -border-bottom-color: white;
+}
+
+.bubble p {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -position: relative;
+  font-size: 1.1em;
+}
+
+.speaker {
+  position: absolute;
+  bottom: -8px;
+  font-size: 0.85em;
+}
+
+.other .bubble {
+  border-left: 10px solid #f7f2ed;
+  border-bottom: 10px solid transparent;
+}
+.other .bubble p {
+  padding: 10px 20px;
+  margin: 0 0 0 -20px;
+  background: #f7f2ed;
+  text-align: left;
+}
+
+.other .speaker {
+  left: 40px;
+}
+
+.you .bubble {
+  border-right: 10px solid #e0f1a6;
+  border-bottom: 10px solid transparent;
+}
+.you .bubble p {
+  padding: 10px 20px;
+  margin: 0 -20px 0 0;
+  background: #e0f1a6;
+  text-align: right;
+}
+.you .speaker {
+  right: 40px;
+  text-align: right;
+}
+
+a {
+  color: #00B4FF;
+  text-decoration: none;
+}
+a:visited {
+  color: #00B4FF;
+}
+
+a:hover {
+  border-bottom: 1px dashed #00B4FF;
+}
