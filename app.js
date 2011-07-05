@@ -136,11 +136,12 @@ socket.on('connection', function(client) {
       data = json({name: speaker, message: msg});
 
       Location.find({id: ""+client.sessionId}, function(err, doc) {
-        if (typeof doc[0] != 'undefined') {
-          client.joinChannel(doc[0].ch);
+        if (!err) {
+          if (typeof doc[0] != 'undefined') {
+            client.joinChannel(doc[0].ch);
+          }
+          client.broadcastToChannel(data, doc[0].ch, client.sessionId);
         }
-        //client.broadcastToChannel(data, doc[0].ch, client.sessionId);
-        client.broadcastToChannel(data, doc[0].ch, client.sessionId);
       });
 
       // for you
