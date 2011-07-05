@@ -139,10 +139,9 @@ socket.on('connection', function(client) {
         if (!err) {
           if (typeof doc[0] != 'undefined') {
             client.joinChannel(doc[0].ch);
-          }
-          if (typeof doc[0].ch != 'undefined') {
-            //client.joinChannel(doc[0].ch);
-            client.broadcastToChannel(data, doc[0].ch, client.sessionId);
+            if (typeof doc[0].ch != 'undefined') {
+              client.broadcastToChannel(data, doc[0].ch, client.sessionId);
+            }
           }
         }
       });
